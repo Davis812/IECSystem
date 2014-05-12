@@ -14,7 +14,7 @@ body {
   background-color: #fff;
   top: 0;
   z-index: 9999;
-  background-image: url(../images/Ocean-Sunsets.jpg);
+  background-image: url(../images/1.jpg);
   background-position: center 0;
   background-repeat: no-repeat;
 }
@@ -56,6 +56,6 @@ body {
   position: relative;
 }
 
-.form-group{
-	text-align:center;
-	}
+.panel-heading{
+  text-align:center;
+}
