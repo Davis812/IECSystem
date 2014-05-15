@@ -1,8 +1,17 @@
+/* GET users listing. */
 
-/*
- * GET users listing.
- */
+var User = require('../models/user.js');
 
-exports.list = function(req, res){
-  res.send("respond with a resource");
+module.exports = function(app) {
+	app.get('/home', function(req, res) {
+		console.log("-------------");
+		User.getList(function(err, users) {
+			console.log(users);
+			var view = {
+				key : 'users',
+				body : users
+			};
+			res.render('home', view);
+		});
+	});
 };

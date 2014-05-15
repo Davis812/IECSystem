@@ -17,15 +17,22 @@
     </div><!--end #header-->
     <div id="sidebar">
           <div id="menu">
-            <ul>
+           <ul>
+             <% if (req.body.privilege==1){ %)>
               <li><a href="preweather.html">天气预报</a></li>
-              <li><a href="indoorpara.html">室内环境质量</a></li>
-              <li><a href="setpoint.html">预设调控幅度</a></li>
+              <li><a href="indoorpara.html">室内环境</a></li>
+              <li><a href="setpoint.html">预设调控</a></li>
               <li><a href="ctrlDevice.html">设备控制</a></li>
-              <li><a href="operatecase.html">系统使用统计</a></li>
+              <li><a href="operatecase.html">操作记录</a></li>
               <li><a href="userctrl.html">用户管理</a></li>
-              <li><a href="about.html"/>关于</a></li>
-            </ul>
+             <% } else {%>
+              <li><a href="preweather.html">天气预报</a></li>
+              <li><a href="indoorpara.html">室内环境</a></li>
+              <li><a href="ctrlDevice.html">设备控制</a></li>
+              <li><a href="operatecase.html">操作记录</a></li>
+             <% } %>
+              <li><a href="logout.html"/>注销</a></li>
+           </ul>
           </div><!--end #menu-->
           <div id="menu_end"></div>
           <div id="lcontent">
@@ -33,3 +40,10 @@
              <h3>退出</h3>
 	      </div><!--end #loctent-->
     </div><!--end #sidebar-->
+    <article>
+      <% if (locals.success) { %>
+        <div ><%= locals.success %></div>
+        <% } %>
+      <% if (locals.error) { %>
+      <div><%= locals.error %> </div>
+     <% } %>
