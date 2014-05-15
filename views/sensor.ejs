@@ -4,19 +4,28 @@
                 	<thead>
                         <tr>
                             <th width="40">#</th>
-                            <th>账号</th>
-                            <th>电话</th>
-                            <th>privilege</th>
-                            <th>管理</th>
+                            <th>time</th>
+                            <th>fresh_temp</th>
+                            <th>fresh_humi</th>
+                            <th>co2</th>
+                            <th>room_temp</th>
+                            <th>room_humi</th>
+                            <th>illumination</th>
+                            <th>id</th>
                         </tr>
                     </thead>
              		<tbody>
-                        <% body.forEach(function(user,index){%>
+                        <% body.forEach(function(sensor,index){%>
                         <tr>
                             <td><%= index + 1%></td>
-                            <td><%= user.username%></td>
-                            <td><%= user.phoneNo%></td>
-                            <td><%= user.privilege%></td>
+                            <td><%= sensor.time%></td>
+                            <td><%= sensor.fresh_temp%></td>
+                            <td><%= sensor.fresh_humi%></td>
+                            <td><%= sensor.co2%></td>
+                            <td><%= sensor.room_temp%></td>
+                            <td><%= sensor.room_humi%></td>
+                            <td><%= sensor.illumination%></td>
+                            <td><%= sensor.id%></td>
                             <td>
                             	<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
                                 <a href="#"><span class="glyphicon glyphicon-trash"></span></a>

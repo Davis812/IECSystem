@@ -4,7 +4,6 @@ var User = require('../models/user.js');
 
 module.exports = function(app) {
 	app.get('/home', function(req, res) {
-		console.log("-------------");
 		User.getList(function(err, users) {
 			console.log(users);
 			var view = {

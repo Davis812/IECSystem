@@ -2,16 +2,20 @@
  * GET home page.
  */
 var User = require('../models/user.js');
+var user = require('./user');
+var sensor = require('./sensor');
 
 module.exports = function(app) {
-
-	function checkNotLogin(req, res, next) {
-		if (req.session.user) {
-			req.flash('error', '已登入');
-			return res.redirect('/home');
-		}
-		next();
-	}
+	
+	user(app);
+	sensor(app);
+//	function checkNotLogin(req, res, next) {
+//		if (req.session.user) {
+//			req.flash('error', '已登入');
+//			return res.redirect('/home');
+//		}
+//		next();
+//	}
 	
 	function checkLogin(req, res, next) {
 		if (!req.session.user) {
@@ -22,7 +26,7 @@ module.exports = function(app) {
 	}
 	
 
-	app.get('/', checkNotLogin);
+	//app.get('/', checkNotLogin);
 	app.get('/', function(req, res) {
 		res.render('login', {
 			title : '登录',
@@ -32,7 +36,7 @@ module.exports = function(app) {
 		});
 	});
 
-	app.post('/', checkNotLogin);
+//	app.post('/', checkNotLogin);
 	app.post('/', function(req, res) {
 		console.log(req.body.username);
 		console.log(req.body.password);
