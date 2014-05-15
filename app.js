@@ -51,6 +51,8 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use("/shows", express.static('views/shows'));
+app.use("/stylesheets", express.static('views/stylesheets'));
+app.use("/images", express.static('views/images'));
 
 if ('development' === app.get('env')) {
 	app.use(express.errorHandler());

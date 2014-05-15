@@ -18,7 +18,7 @@
     <div id="sidebar">
           <div id="menu">
            <ul>
-             <% if (req.body.privilege==1){ %)>
+             <% if (user&&user.privilege==1){ %>
               <li><a href="preweather.html">天气预报</a></li>
               <li><a href="indoorpara.html">室内环境</a></li>
               <li><a href="setpoint.html">预设调控</a></li>
