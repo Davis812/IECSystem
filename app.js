@@ -33,14 +33,12 @@ app.configure(function() {
 app.use(function(req, res, next) {
 	var error = req.flash('error');
 	var success = req.flash('success');
-	console.log("-----------");
 	console.log(req.url);
 	var url = req.url;
 	res.locals.user = req.session.user;
 	res.locals.error = error.length ? error : null;
 	res.locals.success = success ? success : null;
 	if(url !== "/" && !req.session.user && url.indexOf("/static") <= 0){
-		console.log("进入");
 		res.redirect('/');
 	}else{
 		next();
