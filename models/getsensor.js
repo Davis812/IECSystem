@@ -10,14 +10,13 @@ function  Sensor(sensor) {
     this.room_temp = sensor.room_temp;
     this.room_humi = sensor.room_humi;
     this.illumination = sensor.illumination;
-    this.id = sensor.id;
 }
 
 module.exports = Sensor;
-//获取用户列表
+
 Sensor.getList =  function  getList(callback) {
     // 读取 sensor 集合
-    var sql = "select * from t_sensor  ";
+    var sql = "select * from t_sensor";
     console.log(sql);
     mysql.query(sql,function(err,results,fields){
         if(err){

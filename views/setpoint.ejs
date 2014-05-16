@@ -1,0 +1,29 @@
+<%- include header%>
+    <div id="mainContent">
+      <table class="table table-striped">
+                	<thead>
+                        <tr>
+                            <th width="40">调控对象</th>
+                            <th>温度</th>
+                            <th>湿度</th>
+                            <th>二氧化碳浓度</th>
+                            <th>光照度</th>
+                        </tr>
+                    </thead>
+             		<tbody>
+                        <% body.forEach(function(user,index){%>
+                        <tr>
+                            <td><%= index + 1%></td>
+                            <td><%= user.username%></td>
+                            <td><%= user.phoneNo%></td>
+                            <td><%= user.privilege%></td>
+                            <td>
+                            	<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+              </table>
+      <br class="clearfloat"/>
+    </div><!--end #mainContent-->
+<%- include footer%>

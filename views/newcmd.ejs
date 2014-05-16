@@ -1,0 +1,55 @@
+<%- include header%>
+    <div id="mainContent">
+      <table class="table table-striped">
+    	<thead><h3>设备运情况</h3><thead>
+    	<thead>
+            <tr>
+                <th width="40">#</th>
+                <th>time</th>
+                <th>light</th>
+                <th>wetting</th>
+                <th>air_conditioner</th>
+                <th>exhaust_fan</th>
+            </tr>
+        </thead>
+ 		<tbody>
+            <% body.forEach(function(newcmd,index){%>
+            <tr>
+                <td><%= index + 1%></td>
+                <td><%= newcmd.time%></td>
+                <td><%= newcmd.light%></td>
+                <td><%= newcmd.wetting%></td>
+                <td><%= newcmd.exhaust_fan%></td>
+                <td><%= newcmd.air_conditionrt%></td>
+            </tr>
+            <% }) %>
+        </tbody>
+      </table>
+      <table class="table">
+		<h3>手动控制</h3>
+    	<thead>
+            <tr>
+                <th>节能灯</th>
+                <th>加湿器</th>
+                <th>空调</th>
+                <th>排气扇</th>
+            </tr>
+        </thead>
+ 		<tbody>
+            <tr>
+                <td><input type="number" class="form-control" placeholder="Default input" name="light"></td>
+                <td><input type="number" class="form-control" placeholder="Default input" name="wetting"></td>
+                <td><input type="number" class="form-control" placeholder="Default input" name="air_conditionrt"></td>
+                <td><input type="number" class="form-control" placeholder="Default input" name="exhaust_fan"></td>
+            </tr>
+        </tbody>
+      </table>
+      <table class="table">
+        <tr>
+          <button type="submit" class="btn btn-primary btn-lg">提交</button>
+        </tr> 
+        </tbody>
+      </table>
+      <br class="clearfloat"/>
+    </div><!--end #mainContent-->
+<%- include footer%>
