@@ -1,6 +1,6 @@
 /* GET users listing. */
 
-var Sensor = require('../models/sensor.js');
+var Sensor = require('../models/getsensor.js');
 
 module.exports = function(app) {
 	app.get('/sensor', function(req, res) {
