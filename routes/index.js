@@ -5,6 +5,7 @@ var User = require('../models/getuser.js');
 var Sensor = require('../models/getsensor.js');
 var Newcmd = require('../models/getnewcmd.js');
 var Sendcmd = require('../models/sendcmd.js');
+var Setpoint = require('../models/getsetpoint.js');
 
 module.exports = function(app) {
 //	function checkNotLogin(req, res, next) {
@@ -54,7 +55,10 @@ module.exports = function(app) {
 	});
 
 	app.get('/weather', function(req, res) {
-		res.render('weather');
+		var view = {
+			key:'weather'
+		};
+		res.render('weather',view);
 	});
 	
 	app.get('/ctrluser', function(req, res) {
@@ -64,6 +68,7 @@ module.exports = function(app) {
 				key : 'users',
 				body : users
 			};
+			console.log(view);
 			res.render('ctrluser', view);
 		});
 	});
@@ -88,7 +93,17 @@ module.exports = function(app) {
 		});
 	});
 	app.post('/newcmd',function(req,res){
-		
+		//该如何提交
+	});
+	
+	app.get('/setpoint', function(req, res) {
+		Setpoint.getList(function(err, setpoint) {
+			var view = {
+				key : 'setpoint',
+				body : setpoint
+			};
+			res.render('setpoint', view);
+		});
 	});
 	
 	app.get('/logout', function(req, res) {

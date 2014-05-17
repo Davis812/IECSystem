@@ -1,29 +1,49 @@
 <%- include header%>
     <div id="mainContent">
-      <table class="table table-striped">
-                	<thead>
-                        <tr>
-                            <th width="40">调控对象</th>
-                            <th>温度</th>
-                            <th>湿度</th>
-                            <th>二氧化碳浓度</th>
-                            <th>光照度</th>
-                        </tr>
-                    </thead>
-             		<tbody>
-                        <% body.forEach(function(user,index){%>
-                        <tr>
-                            <td><%= index + 1%></td>
-                            <td><%= user.username%></td>
-                            <td><%= user.phoneNo%></td>
-                            <td><%= user.privilege%></td>
-                            <td>
-                            	<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
-                            </td>
-                        </tr>
-                        <% }) %>
-                    </tbody>
-              </table>
-      <br class="clearfloat"/>
+      <table class="table table-hover">
+        <thead>
+        <tr>
+	          <th>调控对象</th>
+	          <th>上限</th>
+	          <th>下限</th>
+	    </tr>
+        </thead>
+        <tbody width="40px">
+	        <tr> 
+	            <th>温度</th>
+	        </tr>
+	        <tr>
+	            <th>湿度</th>
+	        </tr>
+	        <tr>
+	            <th>二氧化碳浓度</th>
+	        </tr>
+	        <tr>
+	            <th>光照度</th>
+	        </tr>
+        </tbody>
+      </table>
+      <table class="table">
+		<h3>幅度设置</h3>
+        	<ul class="pagination">
+              <li class="active"><a href="#">温度</a></li>
+              <li><a href="#">湿度</a></li>
+              <li><a href="#">二氧化碳浓度</a></li>
+              <li><a href="#">照度</a></li>
+            </ul>
+ 		<tbody>
+            <tr>
+                <td><input type="number" class="form-control" placeholder="Default input" name="down"></td>
+                <td><input type="number" class="form-control" placeholder="Default input" name="upper"></td>
+            </tr>
+        </tbody>
+      </table>
+      <table class="table">
+        <tr>
+          <button type="submit" class="btn btn-primary btn-lg">提交</button>
+        </tr> 
+        </tbody>
+      </table>
+      <br ="clearfloat"/>
     </div><!--end #mainContent-->
 <%- include footer%>

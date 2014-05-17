@@ -85,7 +85,7 @@ strong{
 	display: block;
 	position: relative;
 	width: 168px;
-	height: 27px;
+	height: 37px;
 	margin-bottom: 1px;
 	text-decoration: none;
 	background: inherit;
@@ -117,10 +117,10 @@ strong{
 	background: url('../images/x2.gif') no-repeat;
 }
 
-#menu a:hover{
+#menu a.active,#menu a:hover{
 	background: inherit;
 	color: #fff;
-	background-image: url('../images/bbg1.gif');
+	background-image: url('../images/ba.jpg');
 }
 
 #menu_end{
@@ -160,14 +160,3 @@ strong{
 	text-align: center;
 	text-transform: lowercase;
 	position:relative;
-}
-/*#footer {
-  clear: both;
-  background: url('images/a2.gif') repeat-x;
-  position: absolute;
-  color: #fff;
-  bottom: 5%;
-  width: 100%;
-  text-align: center;
-  text-shadow: 0 0 5px #333;
-}*/

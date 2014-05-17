@@ -3,14 +3,14 @@
       <table class="table table-striped">
                 	<thead>
                         <tr>
-                            <th width="40">#</th>
-                            <th>time</th>
-                            <th>fresh_temp</th>
-                            <th>fresh_humi</th>
-                            <th>co2</th>
-                            <th>room_temp</th>
-                            <th>room_humi</th>
-                            <th>illumination</th>
+                            <th width="50">序号</th>
+                            <th>时间</th>
+                            <th>室外温度</th>
+                            <th>室外湿度</th>
+                            <th>二氧化碳</th>
+                            <th>室内温度</th>
+                            <th>室内湿度</th>
+                            <th>亮度</th>
                         </tr>
                     </thead>
              		<tbody>
@@ -28,6 +28,10 @@
                         <% }) %>
                     </tbody>
               </table>
+              <ul class="pagination">
+                <li class="active"><a href="#">图示</a></li>
+                <li><a href="#">列表</a></li>
+              </ul>
       <br class="clearfloat"/>
     </div><!--end #mainContent-->
 <%- include footer%>

@@ -16,7 +16,7 @@ module.exports = Sensor;
 
 Sensor.getList =  function  getList(callback) {
     // 读取 sensor 集合
-    var sql = "select * from t_sensor";
+    var sql = "select * from t_sensor order by time desc limit 20";
     console.log(sql);
     mysql.query(sql,function(err,results,fields){
         if(err){

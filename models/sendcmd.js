@@ -30,7 +30,6 @@ Sendcmd.prototype.save = function(callback){
         if (err) {
             throw err;
         } else {
-            //返回用户id
             return callback(err,fields);
         }
     });
