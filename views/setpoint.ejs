@@ -11,71 +11,58 @@
             </tr>
         </thead>
  		<tbody>
- 			<tr>
- 				<td>温度</td>
-                <td><%= body[0].temp_up%></td>
-                <td><%= body[0].temp_down%></td>
-                <td><%= body[0].time%></td>
- 			<tr>
- 			<tr>
- 				<td>湿度</td>
-                <td><%= body[0].humi_up%></td>
-                <td><%= body[0].humi_down%></td>
-                <td><%= body[0].time%></td>
- 			<tr>
- 			<tr>
- 				<td>亮度</td>
-                <td><%= body[0].ill_up%></td>
-                <td><%= body[0].ill_down%></td>
-                <td><%= body[0].time%></td>
- 			<tr>
- 			<tr>
- 				<td>二氧化碳浓度</td>
-                <td><%= body[0].co_up%></td>
-                <td><%= body[0].co_down%></td>
-                <td><%= body[0].time%></td>
- 			<tr>
+			<tr>
+				<td>温度</td>
+	            <td><%= body[0].temp_up%></td>
+	            <td><%= body[0].temp_down%></td>
+	            <td><%= body[0].time%></td>
+			<tr>
+			<tr>
+				<td>湿度</td>
+	            <td><%= body[0].humi_up%></td>
+	            <td><%= body[0].humi_down%></td>
+	            <td><%= body[0].time%></td>
+			<tr>
+			<tr>
+				<td>亮度</td>
+	            <td><%= body[0].ill_up%></td>
+	            <td><%= body[0].ill_down%></td>
+	            <td><%= body[0].time%></td>
+			<tr>
+			<tr>
+				<td>二氧化碳浓度</td>
+	            <td><%= body[0].co_up%></td>
+	            <td><%= body[0].co_down%></td>
+	            <td><%= body[0].time%></td>
+			<tr>
         </tbody>
       </table>
-      <div id="record-page">
-        <table class="table">
-        <header>
-          <h3>设置对象</h3>
-          <h3>上限</h3>
-          <h3>下限</h3>
-          <h3>修改时间</h3>
-          </table>
-        </header>
-        <div id="record-main">
-         <section id="record-content">
-           <!--添加记录-->
-         </centent><!--end record-content-->
-         <section id="record-sidebar">
-            
-         </section><!--end record-sidebar-->
-        </div><!--end main-->
-	  </div><!--end record-page-->
-      <table class="table">
+      <form method="post">
+       <table class="table">
 		<h3>幅度设置</h3>
-        	<ul class="pagination">
-              <li class="active"><a href="#">温度</a></li>
-              <li><a href="#">湿度</a></li>
-              <li><a href="#">二氧化碳浓度</a></li>
-              <li><a href="#">照度</a></li>
-            </ul>
+		     <div class="btn-group" data-toggle="buttons">
+			  <label class="btn btn-primary">
+			    <input type="radio" name="setwhich" value="temp" id="option1">温度
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="setwhich"  value="humi" id="option2">湿度
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="setwhich"   value="co" id="option3">二氧化碳浓度
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="setwhich"  value="ill" id="option3">亮度
+			  </label>
+			</div>
  		<tbody>
             <tr>
-                <td><input type="number" class="form-control" placeholder="Default input" name="down"></td>
-                <td><input type="number" class="form-control" placeholder="Default input" name="upper"></td>
+                <td><input type="number" class="form-control" placeholder="下限" name="down"></td>
+                <td><input type="number" class="form-control" placeholder="上限" name="upper"></td>
             </tr>
         </tbody>
-      </table>
-      <table class="table">
-        <tr>
-          <button type="submit" class="btn btn-primary btn-lg">提交</button>
-        </tr> 
-        </tbody>
-      </table>
+        </table>
+          <button type="submit" class="btn btn-primary btn-lg" >提交</button>
+        </from>
       <br ="clearfloat"/>
     </div><!--end #mainContent-->
 <%- include footer%>

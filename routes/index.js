@@ -119,6 +119,22 @@ module.exports = function(app) {
 		});
 	});
 	
+	app.post('/setpoint',function(req,res){
+		//该如何提交
+		var setwhich = req.body.setwhich,
+			upper = req.body.upper,
+			down = req.body.down;
+			console.log(setwhich,upper,down);
+			Setpoint.save(setwhich, upper, down, function(err){
+			if(err){
+				req.flash('error',err);
+			}else{
+				req.flash('success','保存成功');
+			}
+			res.redirect('/setpoint');
+		});
+	});
+	
 	app.get('/logout', function(req, res) {
 			req.session.user=null;
 			req.flash('退出系统').toString();
