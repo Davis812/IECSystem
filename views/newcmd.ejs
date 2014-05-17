@@ -14,18 +14,19 @@
         </thead>
  		<tbody>
             <% body.forEach(function(newcmd,index){%>
-            <tr>
+            <tr <%= index==0?  'class=success': "" %> >
                 <td><%= index + 1%></td>
                 <td><%= newcmd.time%></td>
-                <td><%= newcmd.light%></td>
-                <td><%= newcmd.wetting%></td>
-                <td><%= newcmd.exhaust_fan%></td>
-                <td><%= newcmd.air_conditionrt%></td>
+                <td><%if(newcmd.light==1){%>开 <%}else{%>关<%}%></td>
+                <td><%if(newcmd.wetting==1){%>开 <%}else{%>关<%}%></td>
+                <td><%if(newcmd.exhaust_fan==1){%>开 <%}else{%>关<%}%></td>
+                <td><%if(newcmd.air_conditioner==1){%>开 <%}else{%>关<%}%></td>
             </tr>
             <% }) %>
         </tbody>
       </table>
-      <table class="table">
+      <form method="post">
+       <table class="table">
 		<h3>手动控制</h3>
     	<thead>
             <tr>
@@ -37,19 +38,19 @@
         </thead>
  		<tbody>
             <tr>
-                <td><input type="number" class="form-control" placeholder="Default input" name="light"></td>
-                <td><input type="number" class="form-control" placeholder="Default input" name="wetting"></td>
-                <td><input type="number" class="form-control" placeholder="Default input" name="air_conditionrt"></td>
-                <td><input type="number" class="form-control" placeholder="Default input" name="exhaust_fan"></td>
+	            <td><input type="checkbox" <% if(body[0] && body[0].light == 1){ %> checked="true" <% } %> name="light" value="1"></td>
+                <td><input type="checkbox" <% if(body[0] && body[0].wetting == 1){ %> checked="true" <% } %> name="wetting" value="1"></td>
+                <td><input type="checkbox" <% if(body[0] && body[0].air_conditioner == 1){ %> checked="true" <% } %> name="air_conditioner" value="1"></td>
+                <td><input type="checkbox" <% if(body[0] && body[0].exhaust_fan == 1){ %> checked="true" <% } %> name="exhaust_fan" value="1"></td>
             </tr>
         </tbody>
       </table>
       <table class="table">
-        <tr>
-          <button type="submit" class="btn btn-primary btn-lg">提交</button>
-        </tr> 
-        </tbody>
+         <tr>
+          <button type="submit" class="btn btn-primary btn-lg" >提交</button>
+         </tr> 
       </table>
+      </form>
       <br class="clearfloat"/>
     </div><!--end #mainContent-->
 <%- include footer%>

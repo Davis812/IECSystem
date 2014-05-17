@@ -63,12 +63,10 @@ module.exports = function(app) {
 	
 	app.get('/ctrluser', function(req, res) {
 		User.getList(function(err, users) {
-			console.log(users);
 			var view = {
 				key : 'users',
 				body : users
 			};
-			console.log(view);
 			res.render('ctrluser', view);
 		});
 	});
@@ -94,6 +92,21 @@ module.exports = function(app) {
 	});
 	app.post('/newcmd',function(req,res){
 		//该如何提交
+		var time = req.body.time,
+			light = req.body.light,
+			wetting = req.body.wetting,
+			air_conditioner = req.body.air_conditioner,
+			exhaust_fan = req.body.exhaust_fan;
+			console.log(light,wetting,air_conditioner,exhaust_fan);
+		var sendcmd = new Sendcmd(time,light,wetting,air_conditioner,exhaust_fan);
+		sendcmd.save(function (err){
+			if(err){
+				req.flash('error',err);
+			}else{
+				req.flash('success','保存成功');
+			}
+			res.redirect('/newcmd');
+		});
 	});
 	
 	app.get('/setpoint', function(req, res) {

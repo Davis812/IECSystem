@@ -119,7 +119,7 @@ strong{
 
 #menu a.active,#menu a:hover{
 	background: inherit;
-	color: #fff;
+	color: #000;
 	background-image: url('../images/ba.jpg');
 }
 

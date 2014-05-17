@@ -22,7 +22,7 @@ app.configure(function() {
 	app.use(express.session({ // 提供会话支持
 		secret : "hello world",// 这个是session加密需要的，随便写的。
 		cookie : {
-			maxAge : 60000 * 20
+			maxAge : 60*60*60*24
 		// 20 minutes
 		}
 	}));

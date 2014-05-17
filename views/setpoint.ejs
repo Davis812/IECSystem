@@ -1,28 +1,60 @@
 <%- include header%>
     <div id="mainContent">
-      <table class="table table-hover">
-        <thead>
-        <tr>
-	          <th>调控对象</th>
-	          <th>上限</th>
-	          <th>下限</th>
-	    </tr>
+    	<table class="table table-striped">
+    	<thead><h3>设置对象</h3><thead>
+    	<thead>
+            <tr>
+                <th width="50">调控对象</th>
+                <th>上限</th>
+                <th>下限</th>
+                <th>修改时间</th>
+            </tr>
         </thead>
-        <tbody width="40px">
-	        <tr> 
-	            <th>温度</th>
-	        </tr>
-	        <tr>
-	            <th>湿度</th>
-	        </tr>
-	        <tr>
-	            <th>二氧化碳浓度</th>
-	        </tr>
-	        <tr>
-	            <th>光照度</th>
-	        </tr>
+ 		<tbody>
+ 			<tr>
+ 				<td>温度</td>
+                <td><%= body[0].temp_up%></td>
+                <td><%= body[0].temp_down%></td>
+                <td><%= body[0].time%></td>
+ 			<tr>
+ 			<tr>
+ 				<td>湿度</td>
+                <td><%= body[0].humi_up%></td>
+                <td><%= body[0].humi_down%></td>
+                <td><%= body[0].time%></td>
+ 			<tr>
+ 			<tr>
+ 				<td>亮度</td>
+                <td><%= body[0].ill_up%></td>
+                <td><%= body[0].ill_down%></td>
+                <td><%= body[0].time%></td>
+ 			<tr>
+ 			<tr>
+ 				<td>二氧化碳浓度</td>
+                <td><%= body[0].co_up%></td>
+                <td><%= body[0].co_down%></td>
+                <td><%= body[0].time%></td>
+ 			<tr>
         </tbody>
       </table>
+      <div id="record-page">
+        <table class="table">
+        <header>
+          <h3>设置对象</h3>
+          <h3>上限</h3>
+          <h3>下限</h3>
+          <h3>修改时间</h3>
+          </table>
+        </header>
+        <div id="record-main">
+         <section id="record-content">
+           <!--添加记录-->
+         </centent><!--end record-content-->
+         <section id="record-sidebar">
+            
+         </section><!--end record-sidebar-->
+        </div><!--end main-->
+	  </div><!--end record-page-->
       <table class="table">
 		<h3>幅度设置</h3>
         	<ul class="pagination">
