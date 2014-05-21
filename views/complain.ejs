@@ -1,0 +1,42 @@
+<%- include header%>
+    <div id="mainContent">
+	<div class="tab-content">
+	 <div id="list" class="tab-pane active" >
+      <table class="table table-striped">
+                	<thead>
+                        <tr>
+                            <th width="50">序号</th>
+                            <th>时间</th>
+                            <th>冷</th>
+                            <th>热</th>
+                            <th>干</th>
+                            <th>湿</th>
+                            <th>暗</th>
+                            <th>炫</th>
+                            <th>闷</th>
+                            <th>用户</th>
+                        </tr>
+                    </thead>
+             		<tbody>
+                        <% body.forEach(function(compain,index){%>
+                        <tr>
+                            <td><%= index + 1%></td>
+                            <td><%= compain.time%></td>
+                            <td><%= compain.cold%></td>
+                            <td><%= compain.hot%></td>
+                            <td><%= compain.wet%></td>
+                            <td><%= compain.dry%></td>
+                            <td><%= compain.dark%></td>
+                            <td><%= compain.glare%></td>
+                            <td><%= compain.stuffy%></td>
+                            <td><%= compain.user%></td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+              </table>
+      <br class="clearfloat"/>
+      <!-- Nav tabs -->
+      </div>
+      </div>
+      </div><!--end #mainContent-->
+<%- include footer%>

@@ -7,7 +7,7 @@
             port: '3306',
             user: 'root',          //数据库用户名
             password: 'nfz',       //数据库密码
-            database: 'iecsystem'  //数据库名称
+            database: 'iecsys'  //数据库名称
         }
     };
 

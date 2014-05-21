@@ -6,6 +6,7 @@ var Sensor = require('../models/getsensor.js');
 var Newcmd = require('../models/getnewcmd.js');
 var Sendcmd = require('../models/sendcmd.js');
 var Setpoint = require('../models/getsetpoint.js');
+var Complain = require('../models/complain.js');
 
 module.exports = function(app) {
 //	function checkNotLogin(req, res, next) {
@@ -80,6 +81,17 @@ module.exports = function(app) {
 			res.render('sensor', view);
 		});
 	});
+	//抛出服务接口
+	app.get('/service/sensor', function(req, res) {
+		Sensor.getList(function(err, sensors) {
+			var view = {
+				key : 'sensors',
+				body : sensors
+			};
+			res.send(view);
+		});
+	});
+	
 	
 	app.get('/newcmd', function(req, res) {
 		Newcmd.getList(function(err, newcmd) {
@@ -135,6 +147,15 @@ module.exports = function(app) {
 		});
 	});
 	
+	app.get('/complain', function(req, res) {
+		Complain.getList(function(err, complains) {
+			var view = {
+				key : 'complains',
+				body : complains
+			};
+			res.render('complain', view);
+		});
+	});
 	app.get('/logout', function(req, res) {
 			req.session.user=null;
 			req.flash('退出系统').toString();

@@ -1,0 +1,7 @@
+<s
+  var data = <%= body%>;
+  var line= array();
+  foreach(){
+	line[i] = data[fresh_temp]
+  }
+ 
