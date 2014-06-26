@@ -89,6 +89,7 @@ module.exports = function(app) {
 				body : sensors
 			};
 			res.send(view);
+			//console.log(view);
 		});
 	});
 	
