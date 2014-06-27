@@ -108,7 +108,7 @@ module.exports = function(app) {
 		var time = req.body.time,
 			light = (req.body.light === null ? 0 : req.body.light),
 			wetting = (req.body.wetting === null? 0: req.body.wetting),
-			air_conditioner = (req.body.air_conditioner === null?0:req.body.air_conditioner),
+			air_conditioner = (req.body.air_conditioner === null? 0:req.body.air_conditioner),
 			exhaust_fan = (req.body.exhaust_fan === null? 0: req.body.exhaust_fan);
 			console.log(light,wetting,air_conditioner,exhaust_fan);
 		var sendcmd = new Sendcmd(time,light,wetting,air_conditioner,exhaust_fan);
