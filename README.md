@@ -2,19 +2,7 @@
 
 # IECSystem
 
+此项目是用于室内环境控制的Web网站。实现对室内环境控制系统的友好操作。系统有用户管理模块，天气预报模块，室内环境质量模块，设备调控模块，调控幅度控制模块以及用户使用信息统计等模块。
 
+开发工具：node.js+mysql
 
-## Usage
-
-
-
-## Developing
-
-
-
-### Tools
-
-Created with [Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1)
- ([Eclipse Marketplace](http://marketplace.eclipse.org/content/nodeclipse), [site](http://www.nodeclipse.org))   
-
-Nodeclipse is free open-source project that grows with your contributions.
