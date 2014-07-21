@@ -7,8 +7,10 @@ var Newcmd = require('../models/getnewcmd.js');
 var Sendcmd = require('../models/sendcmd.js');
 var Setpoint = require('../models/getsetpoint.js');
 var Complain = require('../models/complain.js');
+var web = require('../web');
 
 module.exports = function(app) {
+	web(app);
 	app.get('/', function(req, res) {
 		res.render('login', {
 			title : '登录',

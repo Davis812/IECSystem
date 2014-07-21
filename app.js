@@ -38,8 +38,12 @@ app.use(function(req, res, next) {
 	res.locals.user = req.session.user;
 	res.locals.error = error.length ? error : null;
 	res.locals.success = success ? success : null;
-	if(url !== "/" && !req.session.user && url.indexOf("/static") <= 0){
+	var path = req.path;
+	if((path !== "/api/login") && (path !== "/") && (!req.session.user) && (url.indexOf("/static") <= 0) && (url.indexOf("api") <= 0) ){
 		res.redirect('/');
+	}else if((path !== "/api/login") && (!req.session.user) && (url.indexOf("api") > 0)){
+		//说明用户未登录，且当前的访问是android,并且不是android的登录操作
+		res.send({"error":"未登录"});
 	}else{
 		next();
 	}
