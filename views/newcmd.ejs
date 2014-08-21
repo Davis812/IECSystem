@@ -1,0 +1,56 @@
+<%- include header%>
+    <div id="mainContent">
+      <table class="table table-striped">
+    	<thead><h3>设备运情况</h3><thead>
+    	<thead>
+            <tr>
+                <th width="50">序号</th>
+                <th>时间</th>
+                <th>节能灯</th>
+                <th>加湿器</th>
+                <th>空调</th>
+                <th>排气扇</th>
+            </tr>
+        </thead>
+ 		<tbody>
+            <% body.forEach(function(newcmd,index){%>
+            <tr <%= index==0?  'class=success': "" %> >
+                <td><%= index + 1%></td>
+                <td><%= newcmd.time%></td>
+                <td><%if(newcmd.light==1){%>开 <%}else{%>关<%}%></td>
+                <td><%if(newcmd.wetting==1){%>开 <%}else{%>关<%}%></td>
+                <td><%if(newcmd.exhaust_fan==1){%>开 <%}else{%>关<%}%></td>
+                <td><%if(newcmd.air_conditioner==1){%>开 <%}else{%>关<%}%></td>
+            </tr>
+            <% }) %>
+        </tbody>
+      </table>
+      <form method="post">
+       <table class="table">
+		<h3>手动控制</h3>
+    	<thead>
+            <tr>
+                <th>节能灯</th>
+                <th>加湿器</th>
+                <th>空调</th>
+                <th>排气扇</th>
+            </tr>
+        </thead>
+ 		<tbody>
+            <tr>
+	            <td><input type="checkbox" <% if(body[0] && body[0].light == 1){ %> checked="true" <% } %> name="light" value="1"></td>
+                <td><input type="checkbox" <% if(body[0] && body[0].wetting == 1){ %> checked="true" <% } %> name="wetting" value="1"></td>
+                <td><input type="checkbox" <% if(body[0] && body[0].air_conditioner == 1){ %> checked="true" <% } %> name="air_conditioner" value="1"></td>
+                <td><input type="checkbox" <% if(body[0] && body[0].exhaust_fan == 1){ %> checked="true" <% } %> name="exhaust_fan" value="1"></td>
+            </tr>
+        </tbody>
+      </table>
+      <table class="table">
+         <tr>
+          <button type="submit" class="btn btn-primary btn-lg" >提交</button>
+         </tr> 
+      </table>
+      </form>
+      <br class="clearfloat"/>
+    </div><!--end #mainContent-->
+<%- include footer%>

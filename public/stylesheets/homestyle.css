@@ -37,7 +37,11 @@ strong{
 	width: 100%;
 	height: 104px;
 	background-color: #4d4d4d;
+<<<<<<< HEAD:public/stylesheets/style.css
 	background: url('../images/a1.gif') repeat-x;
+=======
+	background: url('../images/hh.jpg') repeat-x;
+>>>>>>> origin/master:public/stylesheets/homestyle.css
 	color: #ffffff;
 }
 
@@ -85,7 +89,11 @@ strong{
 	display: block;
 	position: relative;
 	width: 168px;
+<<<<<<< HEAD:public/stylesheets/style.css
 	height: 27px;
+=======
+	height: 37px;
+>>>>>>> origin/master:public/stylesheets/homestyle.css
 	margin-bottom: 1px;
 	text-decoration: none;
 	background: inherit;
@@ -117,10 +125,17 @@ strong{
 	background: url('../images/x2.gif') no-repeat;
 }
 
+<<<<<<< HEAD:public/stylesheets/style.css
 #menu a:hover{
 	background: inherit;
 	color: #fff;
 	background-image: url('../images/bbg1.gif');
+=======
+#menu a.active,#menu a:hover{
+	background: inherit;
+	color: #000;
+	background-image: url('../images/ba.jpg');
+>>>>>>> origin/master:public/stylesheets/homestyle.css
 }
 
 #menu_end{
@@ -137,7 +152,11 @@ strong{
 
 #mainContent{
    background-color:#FFF;
+<<<<<<< HEAD:public/stylesheets/style.css
    margin-left:12em;
+=======
+   margin-left:200px;
+>>>>>>> origin/master:public/stylesheets/homestyle.css
    padding:;
 }
 .clearfloat{
@@ -160,6 +179,7 @@ strong{
 	text-align: center;
 	text-transform: lowercase;
 	position:relative;
+<<<<<<< HEAD:public/stylesheets/style.css
 }
 /*#footer {
   clear: both;
@@ -171,3 +191,6 @@ strong{
   text-align: center;
   text-shadow: 0 0 5px #333;
 }*/
+=======
+}
+>>>>>>> origin/master:public/stylesheets/homestyle.css

@@ -1,0 +1,138 @@
+/* line 6, http://www.glosea.com/assets/less/less.css */
+.block-margin {
+  margin-bottom: 1.2%;
+}
+/* line 10, http://www.glosea.com/assets/less/less.css */
+body {
+  background-color: #eeeeee;
+  font: Verdana, Geneva, sans-serif 1.2em;
+}
+/* line 15, http://www.glosea.com/assets/less/less.css */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+/* line 17, http://www.glosea.com/assets/less/less.css */
+.signin-container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  z-index: 9999;
+  background-image: url(../images/Ocean-Sunsets.jpg);
+  background-position: center 0;
+  background-repeat: no-repeat;
+}
+/* line 31, http://www.glosea.com/assets/less/less.css */
+.signin-container .logo {
+  position: absolute;
+  font-size: 2.5em;
+  color: #fff;
+  top: 5%;
+  left: 5%;
+  text-shadow: 0 0 5px #333;
+  opacity: .4;
+}
+/* line 41, http://www.glosea.com/assets/less/less.css */
+.signin-container .logo small {
+  font-size: .4em;
+}
+/* line 46, http://www.glosea.com/assets/less/less.css */
+.signin-container .copyright {
+  position: absolute;
+  color: #fff;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+  text-shadow: 0 0 5px #333;
+}
+/* line 55, http://www.glosea.com/assets/less/less.css */
+.signin-container .panel {
+  width: 500px;
+  margin-top: 15%;
+  box-shadow: #666 0 0 20px;
+  opacity: .8;
+}
+/* line 62, http://www.glosea.com/assets/less/less.css */
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  padding-left: 160px;
+  position: relative;
+}
+/* line 71, http://www.glosea.com/assets/less/less.css */
+.side {
+  width: 160px;
+  background-color: #fff;
+  height: 100%;
+  border-right: #ddd solid 1px;
+  position: fixed;
+  left: 0;
+}
+/* line 80, http://www.glosea.com/assets/less/less.css */
+.side .list-group {
+  margin-right: -1px;
+}
+/* line 84, http://www.glosea.com/assets/less/less.css */
+.side .list-group-item {
+  border-radius: 0;
+  font-size: 14px;
+}
+/* line 89, http://www.glosea.com/assets/less/less.css */
+.side .glyphicon {
+  margin-right: 10px;
+}
+/* line 93, http://www.glosea.com/assets/less/less.css */
+.main {
+  width: 100%;
+  height: 100%;
+  padding: 1.5%;
+  overflow: auto;
+}
+/* line 100, http://www.glosea.com/assets/less/less.css */
+.main h4 {
+  margin: 0;
+  margin-bottom: 1.2%;
+}
+/* line 105, http://www.glosea.com/assets/less/less.css */
+.main .nav > li > a {
+  padding: 7px 20px;
+  border: none;
+}
+/* line 111, http://www.glosea.com/assets/less/less.css */
+.main .nav > li.active > a {
+  border: 1px solid #ddd;
+}
+/* line 117, http://www.glosea.com/assets/less/less.css */
+.main .panel-heading {
+  padding: 8px 10px;
+}
+/* line 121, http://www.glosea.com/assets/less/less.css */
+.main .pagination {
+  margin: 0;
+}
+/* line 125, http://www.glosea.com/assets/less/less.css */
+.main td > .glyphicon {
+  margin-right: 10px;
+}
+/* line 129, http://www.glosea.com/assets/less/less.css */
+.main hr {
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 139, http://www.glosea.com/assets/less/less.css */
+.view {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 1.5%;
+  border-left: #ddd 1px solid;
+}

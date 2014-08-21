@@ -14,7 +14,11 @@ body {
   background-color: #fff;
   top: 0;
   z-index: 9999;
+<<<<<<< HEAD
   background-image: url(../images/Ocean-Sunsets.jpg);
+=======
+  background-image: url(../images/1.jpg);
+>>>>>>> origin/master
   background-position: center 0;
   background-repeat: no-repeat;
 }
@@ -24,7 +28,11 @@ body {
   font-size: 2.5em;
   color: #fff;
   top: 5%;
+<<<<<<< HEAD
   left: 5%;
+=======
+  right: 5%;
+>>>>>>> origin/master
   text-shadow: 0 0 5px #333;
   opacity: .4;
 }
@@ -54,4 +62,13 @@ body {
   padding: 0;
   padding-left: 160px;
   position: relative;
+<<<<<<< HEAD
 }
+=======
+}
+
+.panel-heading{
+  text-align:center;
+}
+
+>>>>>>> origin/master

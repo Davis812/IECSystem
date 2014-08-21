@@ -1,0 +1,38 @@
+<%- include header%>
+    <div id="mainContent">
+	<div class="tab-content">
+	 <div id="list" class="tab-pane active" >
+      <table class="table table-striped">
+                	<thead>
+                        <tr>
+                            <th width="50">序号</th>
+                            <th>时间</th>
+                            <th>室外温度</th>
+                            <th>室外湿度</th>
+                            <th>二氧化碳</th>
+                            <th>室内温度</th>
+                            <th>室内湿度</th>
+                            <th>亮度</th>
+                        </tr>
+                    </thead>
+             		<tbody>
+                        <% body.forEach(function(sensor,index){%>
+                        <tr>
+                            <td><%= index + 1%></td>
+                            <td><%= sensor.time%></td>
+                            <td><%= sensor.fresh_temp%></td>
+                            <td><%= sensor.fresh_humi%></td>
+                            <td><%= sensor.co2%></td>
+                            <td><%= sensor.room_temp%></td>
+                            <td><%= sensor.room_humi%></td>
+                            <td><%= sensor.illumination%></td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+              </table>
+      <br class="clearfloat"/>
+      <!-- Nav tabs -->
+      </div>
+      </div>
+      </div><!--end #mainContent-->
+<%- include footer%>
